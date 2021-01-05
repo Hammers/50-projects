@@ -43,11 +43,17 @@ body {
 
 .content {
     margin: 100px auto;
+    max-width: 1000px;
     width: 80%;
 }
 
 img {
-    width: 100%;
+    max-width: 100%;
+}
+
+small {
+    margin: 0;
+    font-style: italic;
 }
 
 .nav {
@@ -58,14 +64,24 @@ img {
     flex-direction: column;
     text-transform: uppercase;
     color: white;
-    padding: 10px;
     transform: translateX(-100%);
     transition: .4s ease;
 }
 
-li {
+.nav ul {
     list-style-type: none;
-    margin: 10px 0;
+}
+
+.nav ul li {
+    margin: 20px 0;
+}
+
+.nav ul li + li{
+    margin: 20px 10px;
+}
+
+.nav ul li + li + li {
+    margin: 20px 20px;
 }
 
 .nav.active {
