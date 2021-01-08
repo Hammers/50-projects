@@ -1,0 +1,87 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    display: flex;
+    flex-direction: row;
+    align-items: stretch;
+    justify-content: center;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.split {
+    transition: flex-grow 0.8s ease-out;
+    flex-grow: 1;
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 70%;
+}
+
+.content h1 {
+    font-size: 4rem;
+    color: #fff;
+}
+
+.left {
+    background-image: url('https://tr2.cbsistatic.com/hub/i/r/2020/11/09/beffa5c3-b8e9-4a86-a599-1ac54c3c2964/resize/1200x/7cdef676735fb3440d0a60a07e533319/ps5-digital-edition.jpg');
+    background-size: cover;
+    background-position: center;
+    background-color: rgb(87,84,236);
+    background-blend-mode: multiply;
+    flex-grow: 1;
+}
+
+.right {
+    background-image: url('https://media.wired.com/photos/5fa5dc3dba670daaf8e97a8d/master/pass/games_gear_series-x.jpg');
+    background-size: cover;
+    background-position: center;
+    background-color: dimgrey;
+    background-blend-mode: multiply;
+}
+
+.btn {
+    border: 2px solid #fff;
+    background: none;
+    padding: 1rem 3rem;
+    text-transform: uppercase;
+    color: #fff;
+    font-weight: 700;
+    font-size: 0.7rem;
+    cursor: pointer;
+    outline: none;
+    transition: background-color .2s ease;
+}
+
+.left .btn:hover {
+    background-color: rgb(124, 123, 233);
+}
+
+.right .btn:hover {
+    background-color: rgb(28,122,28);
+}
+
+.split:hover {
+    flex-grow: 3;
+}
+
+@media(max-width: 800px) {
+    body {
+        flex-direction: column;
+    }
+    
+    .content {
+        height: 100%;
+    }
+}
