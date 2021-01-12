@@ -6,7 +6,7 @@ const code = document.querySelector('#code');
 window.addEventListener('keydown', event => {
     instructions.classList.add('hidden');
     key.parentElement.classList.remove('hidden');
-    key.innerText = event.key;
+    key.innerText = event.key === ' ' ? 'Space' : event.key;
     keyCode.parentElement.classList.remove('hidden');
     keyCode.innerText = event.keyCode.toString();
     code.parentElement.classList.remove('hidden');
