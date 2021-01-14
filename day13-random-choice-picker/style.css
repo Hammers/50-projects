@@ -1,0 +1,50 @@
+@import url('https://fonts.googleapis.com/css2?family=Muli');
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Muli', sans-serif;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    overflow: hidden;
+    background-color: #3498db;
+    color: #fff;
+    text-align: center;
+}
+
+.container h3 {
+    margin: 0;
+    font-size: 16px;
+}
+
+.container textarea {
+    margin: 15px 0;
+    outline: none;
+    font-family: 'Muli', sans-serif;
+    padding: 8px;
+}
+
+.choice-container span {
+    background-color: coral;
+    padding: 10px;
+    border-radius: 20px;
+    margin: 5px;
+    font-size: 14px;
+    transition: padding .5s ease,font-size .5s ease;
+}
+
+.choice-container span.selected {
+    background-color: #1c337a;
+}
+
+.choice-container span.selected.chosen {
+    background-color: #2546a9;
+    font-size: 16px;
+    padding: 15px;
+}
