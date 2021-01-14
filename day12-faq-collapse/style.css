@@ -40,4 +40,64 @@ h1 {
     font-family: 'Font Awesome 5 Free';
     color: #2ecc71;
     font-size: 7rem;
+    position: absolute;
+    opacity: 0.2;
+    top: 20px;
+    left: 20px;
+    z-index: 0;
 }
+
+.faq.active::before {
+    color: #3498db;
+    top: -10px;
+    left: -30px;
+    transform: rotateY(180deg);
+}
+
+.faq h3 {
+    margin: 0 35px 0 0;
+}
+
+.faq p {
+    display: none;
+    margin: 30px 0 0;
+}
+
+.faq.active p {
+    display: block;
+}
+
+.faq button {
+    background-color: transparent;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 16px;
+    padding: 0;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    right: 30px;
+    top: 30px;
+    outline: none;
+    border: none;
+}
+
+.faq.active button {
+    background-color: #9fa4a8;
+}
+
+.faq .fa-times {
+    display: none;
+}
+
+.faq.active .fa-times {
+    display: block;
+}
+
+.faq.active .fa-chevron-down {
+    display: none;
+}
+
