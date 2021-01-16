@@ -1,22 +1,13 @@
-const navItems = document.querySelectorAll('.nav-item');
-const button = document.querySelector('.nav button')
+const navItems = document.querySelectorAll('.nav li');
+const button = document.querySelector('.icon')
+const nav = document.querySelector('.nav');
 
-
-for(let label of navItems) {
-    label.innerHTML = label.innerText
-        .split('')
-        .map((letter, idx) => (
-            `<span style="transition-delay: ${idx * 50}ms">
-            ${letter}
-            </span>`
-        ))
-        .join('')
+for(let i = 0; i < navItems.length; i++)
+{
+    navItems[i].style.transitionDuration = `${(navItems.length - i) * 100}ms`;
 }
 
+
 button.addEventListener('click',() => {
-    let timeout = 0
-    for(let navItem of navItems) {
-        setTimeout(function(){navItem.classList.toggle('hidden');},timeout);
-        timeout += 200
-    }
+    nav.classList.toggle('active');
 })
